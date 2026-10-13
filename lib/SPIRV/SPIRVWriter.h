@@ -87,6 +87,7 @@ public:
   enum class FuncTransMode { Decl, Pointer };
 
   SPIRVType *transType(Type *T);
+  bool shouldLowerUSMAddrSpace(unsigned AddrSpace) const;
   SPIRVType *transPointerType(Type *PointeeTy, unsigned AddrSpace);
   SPIRVType *transPointerType(SPIRVType *PointeeTy, unsigned AddrSpace);
   SPIRVType *transSPIRVOpaqueType(StringRef STName, unsigned AddrSpace);
